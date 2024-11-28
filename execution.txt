@@ -1,0 +1,71 @@
+________________________________________________________For Linux___________________________________
+
+python3 -m venv .venv
+source .venv/bin/activate
+deactivate
+______________________________________________________For Windows__________________________________________
+
+python -m venv .venv
+source .venv/Scripts/activate 
+deactivate
+
+
+--------------------------
+
+_____________________________________________________for docker___________________________________
+docker-compose up --build
+docker-compose up -d
+docker-compose down
+
+
+
+_____________________________________________pgadmin_____________________________-
+Email: admin@admin.com
+Password: admin123
+
+
+ASUS@DESKTOP-KMN5I6S MINGW64 ~/Desktop/A-6/django-postgresql/hotel_project (main)
+$ docker network ls
+NETWORK ID     NAME                        DRIVER    SCOPE
+7b43647894b0   bridge                      bridge    local
+e56c5e254901   host                        host      local
+7cc30667aa52   hotel_project_app_network   bridge    local
+b89b2343d992   hotel_project_default       bridge    local
+e90a9358e9a7   none                        null      local
+6b41736c763b   pgadmin_app_network         bridge    local
+44512f1f14ae   portainer_default           bridge    local
+(.venv) 
+
+
+what is bridge????????????????????????????????????????????????????????????????
+what is SSH tunnal??????????????????????????????????????????????????????????
+
+
+admin1234567
+
+
+
+----------------------------for Django----------------------------------
+docker exec -it djangotutorial-web-1
+
+
+docker exec -it djangotutorial-web-1 python manage.py makemigrations
+docker exec -it djangotutorial-web-1 python manage.py migrate
+
+
+docker exec -it djangotutorial-web-1 python manage.py makemigrations polls
+
+docker exec -it djangotutorial-web-1 python manage.py sqlmigrate polls 0001
+
+
+docker exec -it djangotutorial-web-1 python manage.py shell
+
+docker exec -it djangotutorial-web-1 python manage.py createsuperuser
+
+Username: admin
+Password=admin123
+
+docker exec -it djangotutorial-web-1 python manage.py runserver
+_____________________________________________pgadmin_____________________________-
+Email: admin@admin.com
+Password: admin123

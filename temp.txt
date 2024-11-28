@@ -1,0 +1,121 @@
+Django
+Why Django? Key Advantage of Django
+Here are the main advantages of Django:
+Django is easy to set up and run. It offers a variety of options to get started
+It provides a ready-to-use user interface for administrative activities
+It enables multilingual websites by using its built-in internationalization system
+Django helps you to provide end-to-end application testing
+Helps you to document your API with an HTML output
+REST Framework has rich support for several authentication protocols
+Features of Django
+Below are the features of Django: 10 Behavioral Interview Questions and Answers
+Helps you to define patterns for the URLs in your application
+Simple but powerful URL system
+Built-in authentication system
+Object-oriented programming language database which offers best in class data storage
+and retrieval
+Automatic admin interface feature allows the functionality of adding, editing and
+deleting items. You can customize the admin panel as per your need.
+Cache framework comes with multiple cache mechanisms.
+󰀬
+Django Architecture
+MVC Pattern:
+When talking about applications which provide UI (web or desktop), we usually talk about MVC
+architecture. MVC pattern is based on Model, View, and Controller.
+The Model defines the data structure and takes to care for querying the database.
+The View defines what data should be presented and returns an HTTP response.
+The Controller is that part of the application that handles the user interaction.Components of Django
+Form:
+Django has a powerful form library which handles rendering forms as HTML. The library helps
+in validating submitted data and converting it to Python types.
+Authentication:
+It handles user accounts, groups, cookie-based user sessions, etc.
+Admin:
+It reads metadata in your models to provide a robust interface which can be used to manage
+content on your site.
+Internationalization:
+Django provides support for translating text into various languages, locale-specific formatting
+of dates, times, numbers, and timezones.
+Security:
+Django provides safeguard against the following attacks:
+
+Cross-Site Request Forgery (CSRF)
+Cross-site scripting
+SQL injection
+Clickjacking
+Remote code execution
+Django Basics
+Install Django by giving following command-pip install django
+Creating a Project
+To initiate a project of Django on Your PC, open Terminal and Enter the following command
+django-admin startproject projectName
+A New Folder with name projectName will be created. To enter in the project using terminal
+enter command cd projectName
+Now run, python manage.py runserver
+To create a basic app in your Django project you need to go to directory containing manage.py
+and from there enter the command: python manage.py startapp projectApp
+To consider the app in your project you need to specify your project name in INSTALLED_APPS
+list as follows in settings.py:
+Commented [S1]: Make Calibri, and 12 as font size, check
+DB Section @ArifINSTALLED_APPS = [
+'projectApp'
+]
+Now in the list of URL patterns, you need to
+specify app name for including your app urls.
+Here is the code for it –
+from django.contrib import admin
+from django.urls import path, include
+urlpatterns = [
+path('admin/', admin.site.urls),
+# Enter the app name in following syntax
+for this to work
+path('', include("projectApp.urls")),
+]
+Django Views
+Django views are divided into two major categories: -
+
+Function-Based Views
+Class-Based Views
+Function based view Example –
+Let’s Create a function-based view list view to display instances of a model. Let’s create a view
+and template for the same. In geeks/views.py,Class-based views are simpler and efficient to manage than function-based views. A function-
+based view with tons of lines of code can be converted into class-based views with few lines
+only. This is where Object-Oriented Programming comes into impact.
+Django Models
+A Django model is the built-in feature that Django uses to create tables, their fields, and various
+constraints. In short, Django Models is the SQL of Database one uses with Django
+Basics of a model include –
+
+Each model is a Python class that subclasses django.db.models.Model.
+Each attribute of the model represents a database field.
+With all of this, Django gives you an automatically-generated database-access API;Whenever we create a Model, Delete a Model, or update anything in any of models.py of our
+project. We need to run two commands makemigrations and migrate
+So when we run, Python manage.py makemigrations
+SQL Query to create above Model as a Table is created and Python manage.py migrate
+creates the table in the database.
+Django Forms
+When one creates a Form class, the most important part is defining the fields of the form. Each
+field has custom validation logic, along with a few other hooks.
+Django handles three distinct parts of the work involved in forms:
+
+preparing and restructuring data to make it ready for rendering
+creating HTML forms for the data
+receiving and processing submitted forms and data from the client
+ExampleRender Django Forms
+Django form fields have several built-in methods to ease the work of the developer but
+sometimes one needs to implement things manually for customizing User Interface(UI). A form
+comes with 3 in-built methods that can be used to render Django form fields.
+
+{{ form.as_table }} will render them as table cells wrapped in <tr> tags
+{{ form.as_p }} will render them wrapped in <p> tags
+{{ form.as_ul }} will render them wrapped in <li> tags
+Example forms in views
+Example forms in template
+Django Templates
+Templates are the third and most important part of Django’s MVT Structure. A template in
+Django is basically written in HTML, CSS, and Javascript in a .html file
+Create a template in templates/list_view.html,
+References
+https://www.geeksforgeeks.org/django-tutorial/
+https://docs.djangoproject.com/en/3.2/
+https://www.tutorialspoint.com/django/index.htm
